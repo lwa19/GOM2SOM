@@ -16,7 +16,7 @@ library('CountClust')
 library('devtools')
 library('phantasus')
 library('maptpx')
-
+library('Biobase')
 
 # loading fitted data from Stephens Lab
 load('data/GTExV6Brain.FitGoM.rda') # name: GTExV6Brain.FitGoM
@@ -26,3 +26,4 @@ brain_fit <- GTExV6Brain.FitGoM
 data <- read.gct('data/v6_gene.gct')
 #data <- read.table('data/v6_gene.gct', sep = '\t')
 #data <- data.frame(fread('data/GTEx_Analysis_v6_RNA-seq_RNA-SeQCv1.1.8_gene_reads.gct.gz')
+write.exprs(data, file='data/cis_gene_expression.txt')
