@@ -1,0 +1,55 @@
+Pipeline of data analysis in peng:
+
+-----------------------------------------------------
+Data download: 
+1. "GSE65924_E1.gene.expression.txt.gz" counts.file
+
+-----------------------------------------------------
+Data preparation:
+- Read in counts file into data.frame (23362 x 42)
+- Briefly clean and transpose the txt file to imitate the counts matrix
+- Outputs: counts matrix
+	
+	an n x p matrix containing gene expression data 
+	where n is the number of samples, and p is the number of genes:
+	dim()
+	
+	colnames[1:5]: "0610005C13Rik" "0610007N19Rik" "0610007P14Rik" "0610008F07Rik"
+	"0610009B14Rik"
+	
+	rownames[1:5]: "E1.1A" "E1.1P" "E1.2A" "E1.2P" "E1.2L"
+	
+- Output summary:
+	- Number of genes: 23361
+	- Number of samples: 41
+	- Proportion of counts that are non-zero: 53.4%.
+
+- Read in metadata file into dataframe
+- 
+
+- Principle component analysis:
+	- Computation took 1.64 seconds.
+	
+- Compute rough estimates of non-negative factors
+
+ Iteration |        MSE |        MKL |     Target |  Rel. Err.
+--------------------------------------------------------------
+         1 |  2816.3822 |     3.7480 |     3.7480 |          2
+         2 |  1310.7833 |     1.7051 |     1.7051 |        0.7
+         3 |   987.9951 |     0.9493 |     0.9493 |        0.6
+         4 |   842.1653 |     0.8581 |     0.8581 |        0.1
+         5 |   727.1800 |     0.7945 |     0.7945 |       0.08
+         6 |   667.4028 |     0.7626 |     0.7626 |       0.04
+         7 |   638.4160 |     0.7440 |     0.7440 |       0.02
+         8 |   630.6540 |     0.7293 |     0.7293 |       0.02
+         9 |   633.2625 |     0.7159 |     0.7159 |       0.02
+        10 |   642.7087 |     0.7046 |     0.7046 |       0.02
+--------------------------------------------------------------
+ Iteration |        MSE |        MKL |     Target |  Rel. Err.
+
+
+	
+	
+	
+	
+	

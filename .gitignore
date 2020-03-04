@@ -41,3 +41,4 @@ vignettes/*.pdf
 data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_reads.gct.gz
 data/GTEx_v7_Annotations_SampleAttributesDS.txt
 .DS_Store
+.DS_Store

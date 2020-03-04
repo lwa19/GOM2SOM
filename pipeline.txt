@@ -9,7 +9,7 @@ Data download:
 Data preparation:
 - Completed through the "read.gtex.data" function in "code/gtex.R"
 - Outputs: list of 2 lists:
-	[[1]] a data frame containing the sample attributes (specifically, tissue labels):
+	[[1]] ($samples) a data frame containing the sample attributes (specifically, tissue labels):
 	dim(out1) = 11688     2
 	                                general               specific
 	GTEX-1117F-0226-SM-5GZZ7 adipose tissue adipose - subcutaneous
@@ -19,7 +19,7 @@ Data preparation:
 	GTEX-111YS-2426-SM-5GZZQ adipose tissue adipose - subcutaneous
 	GTEX-1122O-2026-SM-5NQ91 adipose tissue adipose - subcutaneous
 	
-	[[2]] an n x p matrix containing gene expression data (read counts) 
+	[[2]] ($counts) an n x p matrix containing gene expression data (read counts) 
 	where n is the number of samples, and p is the number of genes:
 	dim(out2) = 11688 55721
 	
@@ -30,7 +30,13 @@ Data preparation:
 	"GTEX-111FC-0226-SM-5N9B8" "GTEX-111VG-2326-SM-5N9BK"
 	"GTEX-111YS-2426-SM-5GZZQ"
 	
-	
+- Output summary:
+	- Number of genes: 55721
+	- Number of samples: 11688
+	- Proportion of counts that are non-zero: 51.7%.
+	- Number of tissue types (general, specific): 30, 53
+
+
 	
 	
 	
