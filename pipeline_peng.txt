@@ -8,6 +8,8 @@ Data download:
 Data preparation:
 - Read in counts file into data.frame (23362 x 42)
 - Briefly clean and transpose the txt file to imitate the counts matrix
+- Parameters:
+	- K = 20
 - Outputs: counts matrix
 	
 	an n x p matrix containing gene expression data 
@@ -20,8 +22,8 @@ Data preparation:
 	rownames[1:5]: "E1.1A" "E1.1P" "E1.2A" "E1.2P" "E1.2L"
 	
 - Output summary:
-	- Number of genes: 23361
-	- Number of samples: 41
+	- Number of genes (columns): 23361
+	- Number of samples (rows): 41
 	- Proportion of counts that are non-zero: 53.4%.
 
 - Read in metadata file into dataframe
@@ -48,7 +50,7 @@ Data preparation:
  Iteration |        MSE |        MKL |     Target |  Rel. Err.
 
 
-	
+
 	
 	
 	
