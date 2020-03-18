@@ -59,3 +59,8 @@ StructureGGplot(omega = docweights,
                                  axis_ticks_lwd_x = .1,
                                  axis_label_size = 5,
                                  axis_label_face="bold"))
+
+# Save cluster data:
+save(Topic_Clus, file = paste0(indir, 'peng.k.20.master.rda'))
+
+     
