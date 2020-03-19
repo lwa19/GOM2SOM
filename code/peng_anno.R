@@ -20,7 +20,7 @@ GoM_output <- get(load(paste0(indir, 'peng.k.20.master.rda')))
 # Extracting top driving genes
 topics_theta <- GoM_output$theta
 top_features <- ExtractTopFeatures(topics_theta, 
-                                   top_features=100, 
+                                   top_features=200, 
                                    method="poisson", options="min")
 top_genes <- top_features[[1]]
 
@@ -41,3 +41,5 @@ write.table(gene_list, paste0(outdir, "/gene_names_all_gtex.txt"), col.names = F
             row.names=FALSE, quote=FALSE, sep = '\t')
 
 # Well, mygene does not actually work, so I'm going to leave it with just names
+# out <- mygene::queryMany(gene_list[1,],  scopes="ensembl.gene", 
+#                          fields=c("name", "summary", "symbol"), species="mmusculus")
