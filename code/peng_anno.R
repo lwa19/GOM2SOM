@@ -37,7 +37,7 @@ gene_names = as.vector(genes.anno$Marker.Symbol)
 
 gene_list <- do.call(rbind, lapply(1:dim(top_genes)[1], 
                                    function(x) gene_names[top_genes[x,]]))
-write.table(gene_list, paste0(outdir, "/gene_names_all_gtex.txt"), col.names = FALSE,
+write.table(gene_list, paste0(outdir, "/gene_names_200.txt"), col.names = FALSE,
             row.names=FALSE, quote=FALSE, sep = '\t')
 
 # Well, mygene does not actually work, so I'm going to leave it with just names

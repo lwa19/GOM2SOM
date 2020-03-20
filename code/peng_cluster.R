@@ -9,7 +9,7 @@ indir <- 'data/'
 outdir <- 'output/'
 
 # Read in data and id:
-data <- data.frame(fread(paste0(indir, 'peng.csv')))
+data <- data.frame(fread(paste0(indir, 'peng.csv')))   # 41 x 23361
 sample_labels <- read.table(paste0(indir,'peng_data.txt'), header=T,
                              stringsAsFactors = FALSE)
 
